@@ -39,6 +39,8 @@
 .sidebar-menu li {
   padding: 10px;
   cursor: pointer;
+  color: #264653;
+  font-family:Roboto, Helvetica, Arial, sans-serif;
   border-bottom: 1px solid #3F4168;
   transition: background-color 0.2s ease;
 }

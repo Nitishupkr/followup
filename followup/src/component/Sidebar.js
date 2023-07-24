@@ -22,10 +22,10 @@ const Sidebar = ({ setActiveTab }) => {
         <h2 className='dashboard-hd'>DASHBOARD</h2>
       </div>
       <ul className="sidebar-menu">
-        <li onClick={() => handleSetActiveTab('contact')}>CUSTOMER REVIEW</li>
-        <li onClick={() => handleSetActiveTab('service')}>SERVICE</li>
-        <li onClick={() => handleSetActiveTab('about')}>ABOUT</li>
-        <li onClick={() => handleSetActiveTab('login')}>LOG-IN</li>
+        <li onClick={() => handleSetActiveTab('contact')}>Customer Review</li>
+        <li onClick={() => handleSetActiveTab('service')}>Service</li>
+        <li onClick={() => handleSetActiveTab('about')}>About</li>
+        <li onClick={() => handleSetActiveTab('login')}>Login</li>
       </ul>
       {/* Settings button with the settings icon */}
       <button className="settings-button" onClick={handleSettingsClick}>
