@@ -11,10 +11,11 @@ const ReminderItem = ({ reminder }) => {
 
   return (
     <React.Fragment key={reminder.id}>
-      <p><strong>Customer Name - </strong> {reminder.customerName}</p>
-      <p><strong>Customer Email-</strong> {reminder.customerEmail}</p>
-      <p><strong>Feedback-</strong> {reminder.message}</p>
+      <p><strong>Buyer Name - </strong> {reminder.customerName}</p>
+      <p><strong>Buyer Email-</strong> {reminder.customerEmail}</p>
       <p><strong>Date & Time-</strong> {reminder.dateTime}</p>
+      <p><strong>Feedback-</strong> {reminder.message}</p>
+      
       <button className="send-now-button" onClick={handleSendNow}>
         Send Now
       </button>

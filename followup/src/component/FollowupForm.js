@@ -37,11 +37,11 @@ const FollowupForm = ({ onFormSubmit }) => {
       {formError && <div className="form-error">{formError}</div>}
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
-          <label>Customer Name-</label>
+          <label>Buyer Name-</label>
           <input type="text" value={customerName} onChange={(e) => setCustomerName(e.target.value)} />
         </div>
         <div className="form-group">
-          <label>Customer Email-</label>
+          <label>Buyer Email-</label>
           <input type="email" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} />
         </div>
         <div className="form-group">
