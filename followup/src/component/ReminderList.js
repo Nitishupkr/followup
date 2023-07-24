@@ -1,5 +1,5 @@
 import React, { useState, memo } from 'react';
-//import { FiBell } from 'react-icons/fi'; // Import the bell icon from react-icons
+import { AiOutlineSend } from 'react-icons/ai'; // Import the icon for the "Send Now" button
 import './ReminderList.css';
 
 // Destructure the reminder object properties in the function arguments
@@ -12,12 +12,12 @@ const ReminderItem = ({ reminder }) => {
   return (
     <React.Fragment key={reminder.id}>
       <p><strong>Buyer Name - </strong> {reminder.customerName}</p>
-      <p><strong>Buyer Email-</strong> {reminder.customerEmail}</p>
-      <p><strong>Date & Time-</strong> {reminder.dateTime}</p>
-      <p><strong>Feedback-</strong> {reminder.message}</p>
+      <p><strong>Buyer Email -</strong> {reminder.customerEmail}</p>
+      <p><strong>Date & Time -</strong> {reminder.dateTime}</p>
+      <p><strong>Feedback -</strong> {reminder.message}</p>
       
       <button className="send-now-button" onClick={handleSendNow}>
-        Send Now
+        <AiOutlineSend className="send-icon" /> Send Now
       </button>
     </React.Fragment>
   );
