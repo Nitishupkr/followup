@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiSettings } from 'react-icons/fi'; // Import the settings icon from react-icons
+import { FiSettings, FiMail, FiTool, FiInfo, FiUser } from 'react-icons/fi'; // Import the icons from react-icons
 import Sidebars from './Sidebars.css';
 
 const Sidebar = ({ setActiveTab }) => {
@@ -22,10 +22,18 @@ const Sidebar = ({ setActiveTab }) => {
         <h2 className='dashboard-hd'>DASHBOARD</h2>
       </div>
       <ul className="sidebar-menu">
-        <li onClick={() => handleSetActiveTab('contact')}>Customer Review</li>
-        <li onClick={() => handleSetActiveTab('service')}>Service</li>
-        <li onClick={() => handleSetActiveTab('about')}>About</li>
-        <li onClick={() => handleSetActiveTab('login')}>Login</li>
+        <li onClick={() => handleSetActiveTab('contact')}>
+          <FiMail className="menu-icon" /> Customer Review
+        </li>
+        <li onClick={() => handleSetActiveTab('service')}>
+          <FiTool className="menu-icon" /> Service
+        </li>
+        <li onClick={() => handleSetActiveTab('about')}>
+          <FiInfo className="menu-icon" /> About
+        </li>
+        <li onClick={() => handleSetActiveTab('login')}>
+          <FiUser className="menu-icon" /> Login
+        </li>
       </ul>
       {/* Settings button with the settings icon */}
       <button className="settings-button" onClick={handleSettingsClick}>
