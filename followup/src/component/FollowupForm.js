@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { AiOutlineUser, AiOutlineMail, AiOutlineForm, AiOutlineClockCircle } from 'react-icons/ai'; // Import the icons from react-icons
 const FollowupForm = ({ onFormSubmit }) => {
   const [customerName, setCustomerName] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
@@ -33,30 +33,34 @@ const FollowupForm = ({ onFormSubmit }) => {
 
   return (
     <div className="followup-form-container">
-      <h2 className='followup-heading'>Follow-up Reminder Setup</h2>
-      {formError && <div className="form-error">{formError}</div>}
-      <form onSubmit={handleFormSubmit}>
-        <div className="form-group">
-          <label>Buyer Name-</label>
-          <input type="text" value={customerName} onChange={(e) => setCustomerName(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Buyer Email-</label>
-          <input type="email" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Feedback-</label>
-          <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Date & Time-</label>
-          <input type="datetime-local" value={dateTime} onChange={(e) => setDateTime(e.target.value)} />
-        </div>
-        <button type="submit" className="submit-button">
-          Schedule Reminder
-        </button>
-      </form>
-    </div>
+    <h2 className='followup-heading'>Follow-up Reminder Setup</h2>
+    {formError && <div className="form-error">{formError}</div>}
+    <form onSubmit={handleFormSubmit}>
+      <div className="form-group">
+        <AiOutlineUser className="icon" />
+        <label>Buyer Name -</label>
+        <input type="text" value={customerName} onChange={(e) => setCustomerName(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <AiOutlineMail className="icon" />
+        <label>Buyer Email -</label>
+        <input type="email" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <AiOutlineForm className="icon" />
+        <label>Feedback -</label>
+        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <AiOutlineClockCircle className="icon" />
+        <label>Date & Time -</label>
+        <input type="datetime-local" value={dateTime} onChange={(e) => setDateTime(e.target.value)} />
+      </div>
+      <button type="submit" className="submit-button">
+        Schedule Reminder
+      </button>
+    </form>
+  </div>
   );
 };
 
